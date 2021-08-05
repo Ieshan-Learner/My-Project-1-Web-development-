@@ -63,11 +63,10 @@ request.end();
 app.post("/Failure",function (req,res) {
   res.redirect("/");
 })
-let port = process.env.Port;
-if(port == null || port == ""){
-  port = 3000;
+
 };
-app.listen( port || 3000,function(){
+
+app.listen(process.env.PORT || 3000){
   console.log("Server is running on port 3000");
 });
 
